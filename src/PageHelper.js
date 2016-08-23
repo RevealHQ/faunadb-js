@@ -59,6 +59,8 @@ function PageHelper(client, set, params) {
 
   objectAssign(this.params, params);
 
+  this.params.size = 100;
+
   if ('before' in params) {
     this.before = params.before;
     delete this.params.before;
